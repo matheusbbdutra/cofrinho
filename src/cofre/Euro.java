@@ -1,17 +1,18 @@
 package cofre;
 
-public class Real extends Moeda{
+public class Euro extends Moeda{
 
-    public Real(double valor) {
+    public Euro(double valor) {
         this.valor = valor;
     }
     @Override
     public void info() {
-        System.out.println("Real - " + valor);
+        System.out.println();
     }
 
     @Override
     public void converter() {
 
     }
+
 }
