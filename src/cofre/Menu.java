@@ -32,7 +32,7 @@ public class Menu {
                 System.out.println("Opção inválida!");
                 exibirMenu();
             case "1":
-                listaMoedas();
+                subMenuAdicionarMoedas();
                 exibirMenu();
             case "3":
                 cofre.listarMoedas();
@@ -40,39 +40,41 @@ public class Menu {
 
     }
 
-    private void listaMoedas() {
+    private void subMenuAdicionarMoedas() {
 
         System.out.println("Escolha Moeda");
         System.out.println("1 - Real");
         System.out.println("2 - Dólar");
         System.out.println("3 - Euro");
         System.out.print("Digite: ");
-        String  selecionado = scan.next();
+        String  selecionadosub1 = scan.next();
+        Moeda moeda = null;
 
-        switch(selecionado){
+        switch(selecionadosub1){
             default:
                 System.out.println("Você não escolheu nenhuma moeda válida.");
                 break;
             case "1":
                 System.out.print("Informe o valor:");
                 double moedaReal = scan.nextDouble();
-                Real real = new Real(moedaReal);
-                cofre.adicionarMoeda(real);
+                moeda = new Real(moedaReal);
+                cofre.adicionarMoeda(moeda);
                 break;
             case "2":
                 System.out.print("Informe o valor:");
                 double moedaDolar = scan.nextDouble();
-                Dolar dolar = new Dolar(moedaDolar);
-                cofre.adicionarMoeda(dolar);
+                moeda = new Dolar(moedaDolar);
+                cofre.adicionarMoeda(moeda);
                 break;
             case "3":
                 System.out.print("Informe o valor:");
                 double moedaEuro = scan.nextDouble();
-                Euro euro = new Euro(moedaEuro);
-                cofre.adicionarMoeda(euro);
+                moeda = new Euro(moedaEuro);
+                cofre.adicionarMoeda(moeda);
                 break;
         }
 
 
     }
+
 }

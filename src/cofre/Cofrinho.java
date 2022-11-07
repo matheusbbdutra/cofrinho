@@ -1,13 +1,12 @@
 package cofre;
 
 import java.util.ArrayList;
-import java.util.Iterator;
 
 public class Cofrinho {
     private ArrayList<Moeda> listaMoedas;
 
     public Cofrinho() {
-        this.listaMoedas = new ArrayList<>();
+        this.listaMoedas = new ArrayList<Moeda>();
     }
 
     public void adicionarMoeda(Moeda m) {
@@ -20,10 +19,15 @@ public class Cofrinho {
 
     public void listarMoedas() {
 
-        for(Moeda moeda : this.listaMoedas){
-            moeda.info();
+        if (listaMoedas.isEmpty()) {
+            System.out.println("O cofre ainda está vazio.");
+            return;
         }
 
+        for(Moeda moeda : listaMoedas)
+        {
+            moeda.info();
+        }
     }
 
 
