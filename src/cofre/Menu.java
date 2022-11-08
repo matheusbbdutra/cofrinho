@@ -16,7 +16,9 @@ public class Menu {
         cofre = new Cofrinho();
     }
 
-    public void exibirMenu() {
+
+    public void exibirMenu() { //função principal da classe Menu, onde realizamos as escolhas
+
 
         System.out.println("COFRINHO:");
         System.out.println("1-Adicionar moeda");
@@ -60,7 +62,7 @@ public class Menu {
 
     }
 
-    private void subMenuMoedas() {
+    private void subMenuMoedas() { //função privada para listar as moedas disponiveis, sendo executada apenas pela classe exibirMenu
         System.out.println("Escolha Moeda");
         System.out.println("1 - Real");
         System.out.println("2 - Dólar");
@@ -68,7 +70,7 @@ public class Menu {
         System.out.print("Digite: ");
     }
 
-    private void menuAdd() {
+    private void menuAdd() { //Função privada para receber a escolha da moeda, onde chamará e ira inserir as funções referente a moeda escolhida, sendo executada apenas pela classe exibirMenu
         String selecionadoDois = scan.next();
 
         switch(selecionadoDois){
@@ -102,7 +104,7 @@ public class Menu {
         }
     }
 
-    private void menuRemove() {
+    private void menuRemove() { //Função privada para listar as moedas disponiveis para ser removida do Array de moedas, sendo executada apenas pela classe exibirMenu
         System.out.println("Informe a moeda que deseja remover: ");
 
         for (int i = 0; i < moedas.size(); i++) {
@@ -127,7 +129,7 @@ public class Menu {
         System.out.println("Sistema finalizado!");
     }
 
-    private void calularTudo() {
+    private void calularTudo() { //Função privada para calcular os valores adicionados ao cofre em reais, sendo executada apenas pela classe exibirMenu
         System.out.println("---------- Total do Cofrinho ------------\n");
         System.out.println("Total convertido: R$ " + cofre.convertido() + "\n");
     }

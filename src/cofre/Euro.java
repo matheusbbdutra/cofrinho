@@ -6,7 +6,7 @@ public class Euro extends Moeda{
         super(valor);
     }
 
-    public Euro() {}
+    public Euro() {} //Construtor vazio para poder iniciar o objeto sem necessitar de adicionar o valor diretamente.
 
     @Override
     public String info() {

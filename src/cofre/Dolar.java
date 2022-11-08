@@ -6,14 +6,12 @@ public class Dolar extends Moeda{
         super(valor);
     }
 
-    public Dolar () {}
+    public Dolar () {} //Construtor vazio para poder iniciar o objeto sem necessitar de adicionar o valor diretamente.
 
     @Override
     public String info() {
         return "Dólar - $ " + valor;
     }
-
-
 
     @Override
     public double converter() {

@@ -12,15 +12,15 @@ public class Cofrinho {
 
     public Cofrinho() {}
 
-    public void adicionarMoeda(List<Moeda> m) {
+    public void adicionarMoeda(List<Moeda> m) { //Função para adicionar moedas ao array listaMoedas
         this.listaMoedas = m;
     }
 
-    public void removerMoeda(int m) {
+    public void removerMoeda(int m) { //Função para remover moedas ao array listaMoedas
         listaMoedas.remove(m);
     }
 
-    public void listarMoedas() {
+    public void listarMoedas() { //Função para percorrer as moedas existentes no array listaMoedas
         if (listaMoedas.isEmpty()) {
             System.out.println("O cofre ainda está vazio.");
         }
@@ -30,7 +30,7 @@ public class Cofrinho {
         }
     }
 
-    public double convertido() {
+    public double convertido() { //Função para converter os valores em reais das moedas adicionadas ao array listaMoedas
         double totalConvertido = 0;
         for (Moeda m : listaMoedas){
             totalConvertido += m.getValorConvertido();

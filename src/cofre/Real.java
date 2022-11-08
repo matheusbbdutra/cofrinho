@@ -6,13 +6,12 @@ public class Real extends Moeda{
         super(valor);
     }
 
-    public Real() {}
+    public Real() {} //Construtor vazio para poder iniciar o objeto sem necessitar de adicionar o valor diretamente.
 
     @Override
     public String info() {
        return "Real - R$ " + valor;
     }
-
 
     @Override
     public double converter() {
