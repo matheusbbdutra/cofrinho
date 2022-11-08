@@ -3,15 +3,20 @@ package cofre;
 public class Dolar extends Moeda{
 
     public Dolar(double valor) {
-        this.valor = valor;
-    }
-    @Override
-    public void info() {
-        System.out.println("Dólar - " + valor);
+        super(valor);
     }
 
-    @Override
-    public void converter() {
+    public Dolar () {}
 
+    @Override
+    public String info() {
+        return "Dólar - $" + valor;
+    }
+
+
+
+    @Override
+    public double converter() {
+        return this.valor * 5.30;
     }
 }

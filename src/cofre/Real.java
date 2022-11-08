@@ -3,15 +3,19 @@ package cofre;
 public class Real extends Moeda{
 
     public Real(double valor) {
-        this.valor = valor;
-    }
-    @Override
-    public void info() {
-        System.out.println("Real - " + valor);
+        super(valor);
     }
 
-    @Override
-    public void converter() {
+    public Real() {}
 
+    @Override
+    public String info() {
+       return "Real - R$" + valor;
+    }
+
+
+    @Override
+    public double converter() {
+        return this.valor;
     }
 }

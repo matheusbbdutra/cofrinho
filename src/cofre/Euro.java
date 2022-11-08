@@ -3,16 +3,18 @@ package cofre;
 public class Euro extends Moeda{
 
     public Euro(double valor) {
-        this.valor = valor;
+        super(valor);
     }
-    @Override
-    public void info() {
-        System.out.println("Euro - " + valor);
-    }
+
+    public Euro() {}
 
     @Override
-    public void converter() {
-
+    public String info() {
+        return "Euro - € " + valor;
     }
 
+    @Override
+    public double converter() {
+        return this.valor * 5.25;
+    }
 }

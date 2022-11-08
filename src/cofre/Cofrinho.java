@@ -1,32 +1,33 @@
 package cofre;
 
-import java.util.ArrayList;
+import java.util.*;
 
 public class Cofrinho {
-    private ArrayList<Moeda> listaMoedas;
 
-    public Cofrinho() {
-        this.listaMoedas = new ArrayList<Moeda>();
+    private List<Moeda> listaMoedas = new ArrayList<Moeda>();
+
+    public Cofrinho(List<Moeda> listaMoedas) {
+        this.listaMoedas = listaMoedas;
     }
 
-    public void adicionarMoeda(Moeda m) {
-        this.listaMoedas.add(m);
+    public Cofrinho() {}
+
+    public void adicionarMoeda(List<Moeda> m) {
+        this.listaMoedas = m;
     }
 
-    public void removerMoeda(Moeda m) {
-        this.listaMoedas.remove(m);
+    public void removerMoeda(int m) {
+        listaMoedas.remove(m);
     }
 
     public void listarMoedas() {
 
         if (listaMoedas.isEmpty()) {
             System.out.println("O cofre ainda está vazio.");
-            return;
         }
 
-        for(Moeda moeda : listaMoedas)
-        {
-            moeda.info();
+        for (int i = 0; i < this.listaMoedas.size(); i++) {
+            System.out.println(this.listaMoedas.get(i));
         }
     }
 
