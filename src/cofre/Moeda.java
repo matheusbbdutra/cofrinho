@@ -11,10 +11,11 @@ public abstract class Moeda {
     public Moeda() {}
 
     public  abstract String info();
-    public abstract double converter();
 
-    public double getValor() {
-        return valor;
+    public abstract double converter() ;
+
+    public double getValorConvertido() {
+        return converter();
     }
 
     public void setValor(double valor) {

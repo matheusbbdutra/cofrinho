@@ -10,7 +10,7 @@ public class Real extends Moeda{
 
     @Override
     public String info() {
-       return "Real - R$" + valor;
+       return "Real - R$ " + valor;
     }
 
 

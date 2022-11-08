@@ -15,6 +15,6 @@ public class Euro extends Moeda{
 
     @Override
     public double converter() {
-        return this.valor * 5.25;
+        return valor * 5.25;
     }
 }

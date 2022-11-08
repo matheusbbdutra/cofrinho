@@ -10,13 +10,13 @@ public class Dolar extends Moeda{
 
     @Override
     public String info() {
-        return "Dólar - $" + valor;
+        return "Dólar - $ " + valor;
     }
 
 
 
     @Override
     public double converter() {
-        return this.valor * 5.30;
+        return valor * 5.30;
     }
 }

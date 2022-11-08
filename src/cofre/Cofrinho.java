@@ -21,7 +21,6 @@ public class Cofrinho {
     }
 
     public void listarMoedas() {
-
         if (listaMoedas.isEmpty()) {
             System.out.println("O cofre ainda está vazio.");
         }
@@ -31,5 +30,12 @@ public class Cofrinho {
         }
     }
 
+    public double convertido() {
+        double totalConvertido = 0;
+        for (Moeda m : listaMoedas){
+            totalConvertido += m.getValorConvertido();
 
+        }
+        return totalConvertido;
+    }
 }
